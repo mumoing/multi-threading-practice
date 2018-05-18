@@ -1,6 +1,6 @@
 package com.multithreading.chapter2.servlet;
 
-import com.multithreading.annotation.NotThreadSafe;
+import net.jcip.annotations.NotThreadSafe;
 
 import javax.servlet.*;
 import java.io.IOException;

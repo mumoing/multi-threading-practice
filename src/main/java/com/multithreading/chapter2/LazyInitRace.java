@@ -1,6 +1,7 @@
 package com.multithreading.chapter2;
 
-import com.multithreading.annotation.NotThreadSafe;
+
+import net.jcip.annotations.NotThreadSafe;
 
 /**
  * 惰性初始化

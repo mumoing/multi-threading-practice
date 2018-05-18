@@ -1,6 +1,7 @@
 package com.multithreading.chapter3;
 
-import jdk.nashorn.internal.ir.annotations.Immutable;
+
+import net.jcip.annotations.Immutable;
 
 import java.util.HashSet;
 import java.util.Set;
