@@ -14,6 +14,17 @@
   ThreadLocal提供了get和set的访问器，为每个使用它的线程维护一份单独的拷贝。
 ## 第四章 组合对象
 ## 第五章 构建块
-  ConcurrentHashMap不能够在独占访问中加锁，所以不能使用客户端加锁来创建新的原子操作
+  ConcurrentHashMap不能够在独占访问中加锁，所以不能使用客户端加锁来创建新的原子操作
+
+  CopyOnWriteArrayList使用写入时复制的的策略保证线程安全，每次需要修改的时候，他们会创建并重新发布一个新的容器拷贝
+
+  BlockingQueue提供了可阻塞的put和take方法，它们与定时的offer和poll是等价的，如果Queue已满，put方法将阻塞直到空间可用；同理，take方法将被阻塞直到有元素可用
+  
+  java类库中提供了一些BlockingQueue的实现，LinkedBlockingQueuehe和ArrayBlockingQueue是FIFO队列，PriorityBlockingQueue是一个按优先级排序的队列，SynchronizedQueue不是一个真正的队列，不会为队列元素维护任何存储空间，它维护的是一个排队的线程清单，这些线程等待把元素加入(enqueue)或者移除(dequeue)队列
   
-  CopyOnWriteArrayList使用写入时复制的的策略保证线程安全，每次需要修改的时候，他们会创建并重新发布一个新的容器拷贝
+  Java6新增了两个容器类型，Deque和BlockingDeque，分别扩展了Queue和BlockingQueue，实现的是一个双端队列。双端队列适用于窃取工作的模式，适合用于解决消费者和生产者同体的问题。
+  
+  #### Synchronizer
+  闭锁(latch):它可以延迟线程的进度知道线程到达肿着状态，如CountDownLatch,FutureTask,Semaphore
+  
+  关卡(barrier):关卡能够阻塞一组线程，直到某些事情发生。关卡与闭锁的关键不同在于，所有线程必须同时到达关卡点，才能继续处理。闭锁等待的事件，关卡等待的是其他线程，如CyclicBarrier
