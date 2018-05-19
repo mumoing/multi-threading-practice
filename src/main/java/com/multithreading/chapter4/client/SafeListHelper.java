@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 使用客户端加锁
+ * @param <E>
+ */
 @ThreadSafe
 public class SafeListHelper<E> {
 
