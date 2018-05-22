@@ -28,3 +28,18 @@
   闭锁(latch):它可以延迟线程的进度知道线程到达肿着状态，如CountDownLatch,FutureTask,Semaphore
   
   关卡(barrier):关卡能够阻塞一组线程，直到某些事情发生。关卡与闭锁的关键不同在于，所有线程必须同时到达关卡点，才能继续处理。闭锁等待的事件，关卡等待的是其他线程，如CyclicBarrier
+  
+## 任务执行
+#### Executor框架
+    
+    newSingleThreadPool:创建订场的线程池
+    
+    newCachedThreadPool:创建一个可缓存的线程池
+    
+    newSingleThreadExecutor:创建一个单线程化的executor
+    
+    newScheduledThreadPool:创建一个定长的线程池，而且支持定时的以及周期性的任务
+    
+    ExecutorService扩展了Executor接口，并添加了一些线程周期管理的方法
+    
+    Callable和Future可携带结果
