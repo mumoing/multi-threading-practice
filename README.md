@@ -32,7 +32,7 @@
 ## 任务执行
 #### Executor框架
     
-    newSingleThreadPool:创建订场的线程池
+    newSingleThreadPool:创建定长的线程池
     
     newCachedThreadPool:创建一个可缓存的线程池
     
@@ -43,3 +43,5 @@
     ExecutorService扩展了Executor接口，并添加了一些线程周期管理的方法
     
     Callable和Future可携带结果
+    
+    ExecutorCompletionService:Executor+BlockingQueue
