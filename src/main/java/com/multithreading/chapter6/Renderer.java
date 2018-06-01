@@ -3,6 +3,7 @@ package com.multithreading.chapter6;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
+import java.util.concurrent.locks.Lock;
 
 /**
  * CompletionService:Executor+BlockingQueue
